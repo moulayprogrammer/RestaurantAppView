@@ -3,11 +3,13 @@ package com.moulay.restaurantappview;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.TextView;
@@ -61,12 +63,12 @@ public class MainActivity extends AppCompatActivity {
         choisisTable.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
         // choisisTable
         // tabletitre
-        TextView tabletitre = (TextView)findViewById(R.id.tabletitre);
+        /*TextView tabletitre = (TextView)findViewById(R.id.tabletitre);
         tabletitre.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
         // tabletitre
         // table1
         TextView table1 = (TextView)findViewById(R.id.table1);
-        table1.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
+        table1.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));*/
         // table1
         // tabletitre2
         TextView tabletitre2 = (TextView)findViewById(R.id.tabletitre2);
@@ -112,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         // End Fonts
 
         gridTables = (GridLayout) findViewById(R.id.gridTables);
-        table1 = (TextView) findViewById(R.id.table1);
+        table1 = (TextView) findViewById(R.id.table2);
         //Set Event
         setSingleEvent(gridTables);
 
@@ -125,10 +127,12 @@ public class MainActivity extends AppCompatActivity {
             CardView cardView = (CardView) mainGrid.getChildAt(i);
             final int finalI = i;
             cardView.setOnClickListener(new View.OnClickListener() {
+                @SuppressLint("ShowToast")
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(MainActivity.this,"Clicked on", Toast.LENGTH_SHORT);
-                    table1.setText("the width is " + Resources.getSystem().getDisplayMetrics().widthPixels);
+                    Log.d("Main","Clicked on"+finalI);
+//                    Toast.makeText(MainActivity.this,, Toast.LENGTH_SHORT);
+//                    table1.setText("the width is " + Resources.getSystem().getDisplayMetrics().widthPixels);
                     /*Intent intent = new Intent(MainActivity.this,ActivityOne.class);
                     intent.putExtra("info","This is activity from card item index  "+finalI);
                     startActivity(intent);*/
