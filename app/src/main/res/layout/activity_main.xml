@@ -3,25 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
      android:layout_width="match_parent"
-     android:layout_height="match_parent"
-    >
+     android:layout_height="match_parent">
+
     <LinearLayout
         android:id="@+id/tous"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        //Start Toolbar
+        android:orientation="vertical">
+
+        <!--Start Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme">
-            // Start Row of title
 
+            <!--Start Row of title-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -29,8 +28,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/logo"
-                    android:layout_marginRight="10dp"
-                    />
+                    android:layout_marginRight="10dp"/>
 
                 <TextView
                     android:id="@+id/restaurant"
@@ -39,8 +37,7 @@
                     android:paddingRight="5dp"
                     android:text="Restaurant"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="24sp"
-                    />
+                    android:textSize="24sp"/>
 
                 <TextView
                     android:id="@+id/app"
@@ -48,27 +45,26 @@
                     android:layout_height="wrap_content"
                     android:text="App"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"/>
             </LinearLayout>
-            // End row of title
+            <!--End row of title-->
         </androidx.appcompat.widget.Toolbar>
-        // End toolbar
+        <!--End toolbar-->
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar1"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:background="@color/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-             />
-        // Start description
+            android:minHeight="?attr/actionBarSize"/>
+
+        <!--Start description-->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            >
+            android:layout_marginTop="30dp">
             <TextView
                 android:id="@+id/bienvenue"
                 android:layout_width="wrap_content"
@@ -84,8 +80,7 @@
                 android:layout_marginTop="5dp"
                 android:textColor="@color/colorPrimary"
                 android:layout_gravity="center"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
             <TextView
                 android:id="@+id/choisisTable"
                 android:layout_width="wrap_content"
@@ -93,11 +88,11 @@
                 android:text="S.V.P Choisi une table"
                 android:textSize="25dp"
                 android:layout_marginTop="15dp"
-                android:layout_gravity="center"
-                />
+                android:layout_gravity="center" />
         </LinearLayout>
-        // End description
-        // Start Tables
+        <!--End description-->
+
+        <!--Start Tables-->
         <GridLayout
             android:id="@+id/gridTables"
             android:layout_width="wrap_content"
@@ -111,7 +106,7 @@
             android:orientation="horizontal"
             tools:context=".GridXMLActivity">
 
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
@@ -370,10 +365,9 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-
-
         </GridLayout>
-        // End Tables
+        <!--End Tables-->
     </LinearLayout>
-    //End Layout
+
+    <!--End Layout-->
 </ScrollView>

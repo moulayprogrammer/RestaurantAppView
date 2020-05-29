@@ -28,16 +28,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Start Toolbar
-        androidx.appcompat.widget.Toolbar toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
+        /*androidx.appcompat.widget.Toolbar toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);*/
         // End Toolbar
 
         // Get Resolution
-        DisplayMetrics displayMetrics = new DisplayMetrics();
+       /* DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int height = displayMetrics.heightPixels;
-        width = displayMetrics.widthPixels;
+        width = displayMetrics.widthPixels;*/
         // Get Resolution
 
         // Fonts
