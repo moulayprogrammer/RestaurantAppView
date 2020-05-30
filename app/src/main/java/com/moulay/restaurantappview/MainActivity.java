@@ -11,14 +11,19 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridLayout;
+import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
-    GridLayout gridTables;
+    GridView gridTables;
     TextView table1;
     int width;
 
@@ -26,6 +31,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Init View
+        gridTables = findViewById(R.id.gridTables);
+        setFonts();
+
+        // create table list
+        List<Table> tables = new ArrayList<>();
+        for (int i = 0; i < 40; i++) {
+            Table table = new Table(i,i);
+            tables.add(table);
+        }
+
+        // display tables in gridView
+        TablesAdapter adapter = new TablesAdapter(this,tables);
+        gridTables.setAdapter(adapter);
+        gridTables.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, "you click id = "+id, Toast.LENGTH_SHORT).show();
+            }
+        });
 
         // Start Toolbar
         /*androidx.appcompat.widget.Toolbar toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
@@ -42,25 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Fonts
 
-        // app
-        TextView app = (TextView)findViewById(R.id.app);
-        app.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
-        // app
-        // Restaurant
-        TextView restaurant = (TextView)findViewById(R.id.restaurant);
-        restaurant.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
-        // Restaurant
-        // Bonne apetit
-        TextView bonneApetit = (TextView)findViewById(R.id.bonneApetit);
-        bonneApetit.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
-        // Bonne apetit
-        // bienvenue
-        TextView bienvenue = (TextView)findViewById(R.id.bienvenue);
-        bienvenue.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
-        // bienvenue
-        // choisisTable
-        TextView choisisTable = (TextView)findViewById(R.id.choisisTable);
-        choisisTable.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
+
         // choisisTable
         // tabletitre
         /*TextView tabletitre = (TextView)findViewById(R.id.tabletitre);
@@ -71,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         table1.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));*/
         // table1
         // tabletitre2
-        TextView tabletitre2 = (TextView)findViewById(R.id.tabletitre2);
+       /* TextView tabletitre2 = (TextView)findViewById(R.id.tabletitre2);
         tabletitre2.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
         // tabletitre2
         // table2
@@ -116,8 +124,30 @@ public class MainActivity extends AppCompatActivity {
         gridTables = (GridLayout) findViewById(R.id.gridTables);
         table1 = (TextView) findViewById(R.id.table2);
         //Set Event
-        setSingleEvent(gridTables);
+        setSingleEvent(gridTables);*/
 
+    }
+
+    private void setFonts(){
+        // app
+        TextView app = (TextView)findViewById(R.id.app);
+        app.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
+        // app
+        // Restaurant
+        TextView restaurant = (TextView)findViewById(R.id.restaurant);
+        restaurant.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
+        // Restaurant
+        // Bonne apetit
+        TextView bonneApetit = (TextView)findViewById(R.id.bonneApetit);
+        bonneApetit.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
+        // Bonne apetit
+        // bienvenue
+        TextView bienvenue = (TextView)findViewById(R.id.bienvenue);
+        bienvenue.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
+        // bienvenue
+        // choisisTable
+        TextView choisisTable = (TextView)findViewById(R.id.choisisTable);
+        choisisTable.setTypeface(Typeface.createFromAsset(getAssets(),  "fonts/Poppins-Regular.ttf"));
     }
 
     private void setSingleEvent(GridLayout mainGrid) {
