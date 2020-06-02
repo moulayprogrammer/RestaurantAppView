@@ -1,33 +1,46 @@
 package com.moulay.restaurantappview;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainFactory  extends AppCompatActivity {
+public class MainFactory  extends Fragment {
+
+    private View rootView;
 
     RecyclerView dataList;
     List<Integer> images;
     List<String> titles;
     List<String> prices;
     FactoryAdapter adapter;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.facture);
 
-        dataList = findViewById(R.id.dataList);
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        rootView = inflater.inflate(R.layout.facture,container,false);
+        InitUI();
+        return rootView;
+    }
+
+    private void InitUI() {
+
+        dataList = rootView.findViewById(R.id.dataList);
         images = new ArrayList<>();
         titles = new ArrayList<>();
         prices = new ArrayList<>();
@@ -44,9 +57,9 @@ public class MainFactory  extends AppCompatActivity {
         images.add(R.drawable.food);
         images.add(R.drawable.food);
 
-        adapter = new FactoryAdapter(this, images, titles, prices);
+        adapter = new FactoryAdapter(getContext(), images, titles, prices);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1, GridLayoutManager.VERTICAL, false);
         dataList.setLayoutManager(gridLayoutManager);
         dataList.setAdapter(adapter);
     }
