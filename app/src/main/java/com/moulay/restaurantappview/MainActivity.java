@@ -20,8 +20,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     GridView gridTables;
-    TextView table1;
-    int width;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
