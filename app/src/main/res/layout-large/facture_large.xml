@@ -32,16 +32,16 @@
                 android:layout_marginRight="10dp"
                 android:text="Table : "
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:fontFamily="@font/poppins_regular"
                 android:id="@+id/numTableSelected"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="18dp"
+                android:paddingLeft="20dp"
                 android:paddingTop="7dp"
-                android:paddingRight="13dp"
+                android:paddingRight="15dp"
                 android:paddingBottom="5dp"
                 android:text="14 "
                 android:textColor="@color/colorPrimary"
@@ -81,7 +81,7 @@
                     android:layout_weight="1"
                     android:text="FACTURE"
                     android:textStyle="bold"
-                    android:textSize="18dp"
+                    android:textSize="20dp"
                     android:paddingLeft="10dp"
                     android:textColor="@color/textColor"
                     />
@@ -94,9 +94,9 @@
                 android:layout_marginTop="50dp"
                 >
                 <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/dataList"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                    android:id="@+id/dataList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
@@ -116,7 +116,7 @@
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="TOTAL"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:paddingLeft="10dp"
                     android:textStyle="bold"
                     android:textColor="@color/textColor"
@@ -134,7 +134,7 @@
                     android:paddingBottom="5dp"
                     android:text="1050 DA "
                     android:textColor="@color/colorPrimary"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -154,7 +154,7 @@
             android:layout_marginBottom="10dp"
             android:textStyle="bold"
             android:textAllCaps="false"
-            android:textSize="15dp"
+            android:textSize="16dp"
             android:drawableLeft="@drawable/checkc"
             android:paddingLeft="25dp"
             android:paddingRight="10dp"
