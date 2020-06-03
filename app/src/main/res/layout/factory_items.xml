@@ -7,7 +7,8 @@
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_centerHorizontal="true"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    card_view:cardElevation="0dp">
+    card_view:cardElevation="0dp"
+    >
 
 
         <LinearLayout
@@ -19,17 +20,17 @@
 
             <ImageView
                 android:id="@+id/imageOfFood"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 app:srcCompat="@drawable/food"
                 />
 
             <LinearLayout
-                android:layout_width="170dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="2dp"
                 >
 
@@ -39,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:text="Soupe de poisson"
                     android:textColor="@color/textColor"
-                    android:textSize="16dp"
+                    android:textSize="14dp"
                     android:fontFamily="@font/poppins_regular"
                     />
 
@@ -47,76 +48,73 @@
                     android:id="@+id/priceOfFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
                     android:text="4500DA"
                     android:textColor="@color/textColor"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/poppins_regular"
-                    />
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="2dp"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_gravity="center"
                     android:divider="@null"
                     android:dividerHeight="0dp"
-                    >
+                    android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/minusQuantity"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:text="-"
-                        android:padding="0dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_marginRight="10dp"
+                        android:background="@drawable/radius_quantity_button"
                         android:fontFamily="@font/poppins_regular"
-                        android:background="@drawable/radius_quantity_button"/>
+                        android:padding="0dp"
+                        android:text="-" />
                     />
 
                     <TextView
                         android:id="@+id/quantity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
                         android:text="1"
                         android:textColor="@color/textColor"
-                        android:textSize="18dp"
-                        android:fontFamily="@font/poppins_regular"
-                        />
+                        android:textSize="15dp" />
 
                     <Button
                         android:id="@+id/addQuantity"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:padding="0dp"
-                        android:text="+"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_marginLeft="10dp"
+                        android:background="@drawable/radius_quantity_button"
                         android:fontFamily="@font/poppins_regular"
-                        android:background="@drawable/radius_quantity_button"/>
+                        android:padding="0dp"
+                        android:text="+" />
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/deleteFood"
                     android:layout_width="wrap_content"
-                    android:layout_height="25dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_regular"
+                    android:background="@android:color/transparent"
                     android:drawableLeft="@drawable/delete_food_icon"
-                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
                     android:text="Supprimer"
                     android:textAllCaps="false"
                     android:textColor="@color/buttonsColor"
-                    android:textSize="15dp"
-                    android:background="@android:color/transparent"
-                    />
+                    android:textSize="10dp" />
             </LinearLayout>
 
         </LinearLayout>

@@ -41,6 +41,7 @@ public class MainFactory  extends Fragment {
     private void InitUI() {
 
         dataList = rootView.findViewById(R.id.dataList);
+        dataList.setNestedScrollingEnabled(false);
         images = new ArrayList<>();
         titles = new ArrayList<>();
         prices = new ArrayList<>();
