@@ -26,7 +26,7 @@
                 />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginLeft="5dp"
@@ -36,11 +36,13 @@
 
                 <TextView
                     android:id="@+id/titleOfFood"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Soupe de poisson"
+                    android:text="Small de poisson"
                     android:textColor="@color/textColor"
                     android:textSize="12dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
                     android:fontFamily="@font/poppins_regular"
                     />
 

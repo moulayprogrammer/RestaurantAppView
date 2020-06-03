@@ -46,7 +46,7 @@ public class MainFactory  extends Fragment {
         titles = new ArrayList<>();
         prices = new ArrayList<>();
 
-        titles.add("Soupe de poisson");
+        titles.add("Soupe de poisson poisson poisson poisson");
         titles.add("Salade variée");
         titles.add("Pizza Neapolitan");
 

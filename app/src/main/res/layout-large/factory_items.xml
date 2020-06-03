@@ -38,9 +38,11 @@
                 android:id="@+id/titleOfFood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Soupe de poisson"
+                android:text="Large de poisson"
                 android:textColor="@color/textColor"
                 android:textSize="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:fontFamily="@font/poppins_regular"
                 />
 
