@@ -110,7 +110,7 @@
                 android:layout_height="25dp"
                 android:layout_gravity="center"
                 android:fontFamily="@font/poppins_regular"
-                android:drawableLeft="@drawable/delete_food_icon"
+                android:drawableLeft="@drawable/delete_food_icon_large"
                 android:drawablePadding="10dp"
                 android:text="Supprimer"
                 android:textAllCaps="false"
