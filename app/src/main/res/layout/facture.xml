@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="17dp"
             android:orientation="horizontal">
 
             <TextView
@@ -145,19 +145,20 @@
             android:fontFamily="@font/poppins_regular"
             android:id="@+id/button2"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_marginTop="-45dp"
             android:layout_gravity="center_horizontal"
             android:text="Confirmer"
             android:background="@drawable/confirmbg"
             android:textColor="@color/colorPrimary"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:textStyle="bold"
             android:textAllCaps="false"
             android:textSize="15dp"
             android:drawableLeft="@drawable/checkc"
             android:paddingLeft="25dp"
             android:paddingRight="10dp"
+
             />
 
         <!--End description-->
