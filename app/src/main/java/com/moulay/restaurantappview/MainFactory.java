@@ -47,16 +47,16 @@ public class MainFactory  extends Fragment {
         prices = new ArrayList<>();
 
         titles.add("Soupe de poisson poisson poisson poisson");
-        titles.add("Salade variée");
-        titles.add("Pizza Neapolitan");
+        /*titles.add("Salade variée");
+        titles.add("Pizza Neapolitan");*/
 
         prices.add("300 DA");
-        prices.add("500 DA");
-        prices.add("700 DA");
+       /* prices.add("500 DA");
+        prices.add("700 DA");*/
 
         images.add(R.drawable.food);
-        images.add(R.drawable.food);
-        images.add(R.drawable.food);
+        /*images.add(R.drawable.food);
+        images.add(R.drawable.food);*/
 
         adapter = new FactoryAdapter(getContext(), images, titles, prices);
 

@@ -3,6 +3,7 @@ package com.moulay.restaurantappview;
 import android.content.Context;
 import android.media.Image;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
