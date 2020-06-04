@@ -28,7 +28,7 @@
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="0dp"
             >
@@ -60,7 +60,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="-5dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -73,12 +73,15 @@
 
                 <Button
                     android:id="@+id/minusQuantity"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
                     android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
                     android:background="@drawable/radius_quantity_button"
                     android:fontFamily="@font/poppins_regular"
                     android:paddingLeft="2dp"
+                    android:paddingTop="0dp"
                     android:text="-"
                     android:textSize="10dp"/>
 
@@ -88,31 +91,33 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
                     android:text="1"
-                    android:textColor="@color/textColor"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="15dp"
 
                     />
 
                 <Button
                     android:id="@+id/addQuantity"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/radius_quantity_button"
                     android:fontFamily="@font/poppins_regular"
                     android:padding="0dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
                     android:text="+"
                     android:textSize="10dp"/>
             </LinearLayout>
 
             <Button
                 android:id="@+id/deleteFood"
-                android:layout_width="match_parent"
+                android:layout_width="65dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/poppins_regular"
-
+                android:drawableLeft="@drawable/delete_food_icon"
                 android:text="Supprimer"
                 android:textAllCaps="false"
                 android:textColor="@color/buttonsColor"
