@@ -5,15 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    >
+    tools:ignore="MissingDefaultResource">
 
     <LinearLayout
         android:id="@+id/tous"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingBottom="35dp"
-        >
+        android:paddingBottom="35dp">
 
         <!--Start description-->
 
