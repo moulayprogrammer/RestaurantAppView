@@ -25,7 +25,7 @@
             />
 
         <LinearLayout
-            android:layout_width="130dp"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginLeft="10dp"
@@ -52,7 +52,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="4500DA"
                 android:textColor="@color/textColor"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -60,7 +60,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-5dp"
+
             android:orientation="vertical">
 
             <LinearLayout
@@ -69,59 +69,56 @@
                 android:layout_gravity="center"
                 android:divider="@null"
                 android:dividerHeight="0dp"
-                android:orientation="horizontal">
 
-                <Button
+                android:orientation="horizontal">
+                <ImageView
+                    android:padding="3dp"
                     android:id="@+id/minusQuantity"
+                    android:src="@drawable/ic_remove_black_24dp"
+                    android:background="@drawable/radius_quantity_button"
                     android:layout_width="17dp"
                     android:layout_height="17dp"
-                    android:layout_marginRight="10dp"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:textColor="@color/white"
-                    android:background="@drawable/radius_quantity_button"
-                    android:fontFamily="@font/poppins_regular"
-                    android:paddingLeft="2dp"
-                    android:paddingTop="0dp"
-                    android:text="-"
-                    android:textSize="10dp"/>
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp" />
 
                 <TextView
+
                     android:id="@+id/quantity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="1"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="15dp"
+                    android:text="10"
+                    android:textColor="@color/textColor"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
 
-                    />
-
-                <Button
+                <ImageView
+                    android:padding="3dp"
                     android:id="@+id/addQuantity"
+                    android:src="@drawable/ic_add_black_24dp"
+                    android:background="@drawable/radius_quantity_button"
                     android:layout_width="17dp"
                     android:layout_height="17dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/radius_quantity_button"
-                    android:fontFamily="@font/poppins_regular"
-                    android:padding="0dp"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:textColor="@color/white"
-                    android:text="+"
-                    android:textSize="10dp"/>
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" />
+
             </LinearLayout>
 
             <Button
+                android:drawableLeft="@drawable/ic_close_black_24dp"
                 android:id="@+id/deleteFood"
                 android:layout_width="65dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/poppins_regular"
-                android:drawableLeft="@drawable/delete_food_icon"
+
                 android:text="Supprimer"
                 android:textAllCaps="false"
                 android:textColor="@color/buttonsColor"
-                android:textSize="9dp" />
+                android:layout_marginTop="3dp"
+                android:textSize="10sp"
+                />
         </LinearLayout>
 
     </LinearLayout>
