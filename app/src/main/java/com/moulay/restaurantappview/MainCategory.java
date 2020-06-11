@@ -8,6 +8,7 @@ import android.widget.Adapter;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,16 +27,16 @@ public class MainCategory extends AppCompatActivity {
         setContentView(R.layout.category);
 
         models = new ArrayList<>();
-        models.add(new FoodModel(R.drawable.food, "Soupe 1", "Brochure is an informative paper document (often also used for advertising) that can be folded into a template",R.drawable.stars,15));
-        models.add(new FoodModel(R.drawable.food, "Soupe 2", "Brochure is an informative paper document (often also used for advertising) that can be folded into a template",R.drawable.stars,15));
-        models.add(new FoodModel(R.drawable.food, "Soupe 3", "Brochure is an informative paper document (often also used for advertising) that can be folded into a template",R.drawable.stars,15));
-        models.add(new FoodModel(R.drawable.food, "Soupe 4", "Brochure is an informative paper document (often also used for advertising) that can be folded into a template",R.drawable.stars,15));
+        models.add(new FoodModel(R.drawable.food, "Soupe 1", "Brochure is an informative paper document (often also used for advertising) that can be folded into a template",R.drawable.stars,150));
+        models.add(new FoodModel(R.drawable.food, "Soupe 2", "Brochure is an informative paper document (often also used for advertising) that can be folded into a template",R.drawable.stars,150));
+        models.add(new FoodModel(R.drawable.food, "Soupe 3", "Brochure is an informative paper document (often also used for advertising) that can be folded into a template",R.drawable.stars,150));
+        models.add(new FoodModel(R.drawable.food, "Soupe 4", "Brochure is an informative paper document (often also used for advertising) that can be folded into a template",R.drawable.stars,150));
 
 
         adapter = (Adapter) new FoodAdapter(models, this);
 
         viewPager = findViewById(R.id.viewPager);
-        viewPager.setAdapter((PagerAdapter) adapter);
+        viewPager.setAdapter((PagerAdapter)adapter);
         viewPager.setPadding(130, 0, 130, 0);
 
         Integer[] colors_temp = {
