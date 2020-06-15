@@ -13,7 +13,7 @@ public class FoodActivity extends AppCompatActivity {
     FragmentManager manager;
     FragmentTransaction transaction;
     MainFactory factory;
-
+    MainCategories mainCategory;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +25,10 @@ public class FoodActivity extends AppCompatActivity {
 
     private void launchFragmentFactor(){
         factory = new MainFactory();
+        mainCategory = new MainCategories();
         transaction = manager.beginTransaction();
         transaction.add(R.id.factorContainer,factory,"FactorFragment");
+        transaction.add(R.id.categoryContainer,mainCategory,"CategoryFragment");
         transaction.addToBackStack(null);
         transaction.commit();
     }

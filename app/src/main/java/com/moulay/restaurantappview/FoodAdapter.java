@@ -1,7 +1,9 @@
 package com.moulay.restaurantappview;
 
 import android.content.Context;
-import android.content.Intent;
+import android.media.Image;
+import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,66 +11,65 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.viewpager.widget.PagerAdapter;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class FoodAdapter extends PagerAdapter {
+public class FoodAdapter extends RecyclerView.Adapter {
 
-    private List<FoodModel> models;
-    private LayoutInflater layoutInflater;
-    private Context context;
+    List<Integer> images;
+    List<String> titles;
+    List<String> descriptions;
+    List<String> prices;
+    LayoutInflater inflater;
+    private ViewHolder holder;
+    private int position;
 
-    public FoodAdapter(List<FoodModel> models, Context context) {
-        this.models = models;
-        this.context = context;
-    }
-
-    @Override
-    public int getCount() {
-        return models.size();
-    }
-
-    @Override
-    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view.equals(object);
+    public FoodAdapter(Context ctx, List<Integer> images, List<String> titles,  List<String> descriptions,List<String> prices){
+        this.images=images;
+        this.titles=titles;
+        this.prices=prices;
+        this.descriptions = descriptions;
+        this.inflater= LayoutInflater.from(ctx);
     }
 
     @NonNull
     @Override
-    public Object instantiateItem(@NonNull ViewGroup container, final int position) {
-        layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.category, container, false);
-
-        ImageView image;
-        TextView title, desc,price;
-
-        image = view.findViewById(R.id.imageFood);
-        title = view.findViewById(R.id.titleFood);
-        desc = view.findViewById(R.id.descriptionFood);
-        price = view.findViewById(R.id.priceFood);
-
-        image.setImageResource(models.get(position).getImage());
-        title.setText(models.get(position).getTitle());
-        desc.setText(models.get(position).getDesc());
-        price.setText(models.get(position).getPrice() + "");
-
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra("param", models.get(position).getTitle());
-                context.startActivity(intent);
-                // finish();
-            }
-        });
-
-        container.addView(view, 0);
-        return view;
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = inflater.inflate(R.layout.food_item,parent,false);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((View)object);
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        ViewHolder myViewHolder1 = (ViewHolder) holder;
+        myViewHolder1.imageFood.setImageResource(images.get(position));
+        myViewHolder1.titleFood.setText(titles.get(position));
+        myViewHolder1.descriptionFood.setText(descriptions.get(position));
+        myViewHolder1.priceFood.setText(prices.get(position));
     }
+
+    @Override
+    public int getItemCount() {
+        return titles.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        TextView titleFood;
+        TextView descriptionFood;
+        TextView priceFood;
+        ImageView imageFood;
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            imageFood = itemView.findViewById(R.id.imageFood);
+            titleFood = itemView.findViewById(R.id.titleFood);
+            descriptionFood = itemView.findViewById(R.id.descriptionFood);
+            priceFood = itemView.findViewById(R.id.priceFood);
+
+        }
+    }
+
+
+
+
 }
