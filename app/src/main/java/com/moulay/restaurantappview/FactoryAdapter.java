@@ -41,7 +41,7 @@ public class FactoryAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         ViewHolder myViewHolder1 = (ViewHolder) holder;
-//        myViewHolder1.title.setText(titles.get(position));
+        myViewHolder1.title.setText(titles.get(position));
         myViewHolder1.price.setText(prices.get(position));
         myViewHolder1.image.setImageResource(images.get(position));
     }

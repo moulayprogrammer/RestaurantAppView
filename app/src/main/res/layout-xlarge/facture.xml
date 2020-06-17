@@ -123,22 +123,22 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="20dp"
                 >
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/dataList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="45dp"
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="0dp"
                     android:orientation="horizontal">
 
                     <TextView
