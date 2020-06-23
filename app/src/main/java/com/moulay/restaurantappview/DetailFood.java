@@ -1,9 +1,7 @@
 package com.moulay.restaurantappview;
 
 import android.content.Context;
-import android.media.Image;
-import android.text.Layout;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,21 +9,25 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class FoodAdapter extends RecyclerView.Adapter {
+public class DetailFood extends RecyclerView.Adapter  {
 
     List<Integer> images;
     List<String> titles;
     List<String> descriptions;
     List<String> prices;
     LayoutInflater inflater;
-    private ViewHolder holder;
+    private FoodAdapter.ViewHolder holder;
     private int position;
 
-    public FoodAdapter(Context ctx, List<Integer> images, List<String> titles,  List<String> descriptions,List<String> prices){
+    public DetailFood(Context ctx, List<Integer> images, List<String> titles,  List<String> descriptions,List<String> prices){
         this.images=images;
         this.titles=titles;
         this.prices=prices;
@@ -35,14 +37,14 @@ public class FoodAdapter extends RecyclerView.Adapter {
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.food_item,parent,false);
-        return new ViewHolder(view);
+    public FoodAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = inflater.inflate(R.layout.foods_in_category_item,parent,false);
+        return new FoodAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ViewHolder myViewHolder1 = (ViewHolder) holder;
+        FoodAdapter.ViewHolder myViewHolder1 = (FoodAdapter.ViewHolder) holder;
         myViewHolder1.imageFood.setImageResource(images.get(position));
         myViewHolder1.titleFood.setText(titles.get(position));
         myViewHolder1.descriptionFood.setText(descriptions.get(position));
@@ -68,8 +70,4 @@ public class FoodAdapter extends RecyclerView.Adapter {
 
         }
     }
-
-
-
-
 }

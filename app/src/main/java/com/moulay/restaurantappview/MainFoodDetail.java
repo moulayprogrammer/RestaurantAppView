@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class FoodAdapter extends RecyclerView.Adapter {
+public class MainFoodDetail extends RecyclerView.Adapter {
 
     List<Integer> images;
     List<String> titles;
@@ -25,7 +25,7 @@ public class FoodAdapter extends RecyclerView.Adapter {
     private ViewHolder holder;
     private int position;
 
-    public FoodAdapter(Context ctx, List<Integer> images, List<String> titles,  List<String> descriptions,List<String> prices){
+    public MainFoodDetail(Context ctx, List<Integer> images, List<String> titles,  List<String> descriptions,List<String> prices){
         this.images=images;
         this.titles=titles;
         this.prices=prices;
@@ -36,7 +36,7 @@ public class FoodAdapter extends RecyclerView.Adapter {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.food_item,parent,false);
+        View view = inflater.inflate(R.layout.foods_in_category_item,parent,false);
         return new ViewHolder(view);
     }
 
@@ -54,7 +54,7 @@ public class FoodAdapter extends RecyclerView.Adapter {
         return titles.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder{
         TextView titleFood;
         TextView descriptionFood;
         TextView priceFood;
@@ -65,7 +65,6 @@ public class FoodAdapter extends RecyclerView.Adapter {
             titleFood = itemView.findViewById(R.id.titleFood);
             descriptionFood = itemView.findViewById(R.id.descriptionFood);
             priceFood = itemView.findViewById(R.id.priceFood);
-
         }
     }
 
