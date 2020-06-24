@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <!--Start Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <!--Start Row of title-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/restaurant"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:text="Restaurant"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:fontFamily="@font/poppins_regular"
+                android:id="@+id/app"
+                android:layout_width="63dp"
+                android:layout_height="wrap_content"
+                android:text="App"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"/>
+        </LinearLayout>
+        <!--End row of title-->
+    </androidx.appcompat.widget.Toolbar>
+    <!--End toolbar-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/categoryLayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/category_container_bg"
+        android:layout_height="100dp"
+        android:paddingTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <TextView
+            android:id="@+id/titleCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soupes"
+            android:textSize="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/categoryDetailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/foodDetailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

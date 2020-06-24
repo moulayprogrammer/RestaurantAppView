@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class DetailFood extends RecyclerView.Adapter  {
+public class DetailCategoryAdapter extends RecyclerView.Adapter  {
 
     List<Integer> images;
     List<String> titles;
@@ -27,7 +27,7 @@ public class DetailFood extends RecyclerView.Adapter  {
     private FoodAdapter.ViewHolder holder;
     private int position;
 
-    public DetailFood(Context ctx, List<Integer> images, List<String> titles,  List<String> descriptions,List<String> prices){
+    public DetailCategoryAdapter(Context ctx, List<Integer> images, List<String> titles, List<String> descriptions, List<String> prices){
         this.images=images;
         this.titles=titles;
         this.prices=prices;

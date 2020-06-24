@@ -9,4 +9,7 @@
     <color name="buttonBackground">#EAEAEA</color>
     <color name="contentBG">#fafafa</color>
 
+
+    <color name="colorPrimary2">#FF9800</color>
+
 </resources>

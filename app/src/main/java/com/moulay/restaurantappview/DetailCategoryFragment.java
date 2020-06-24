@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DetailFoodActivityAdapter extends Fragment {
+public class DetailCategoryFragment extends Fragment {
 
     private View rootView;
 
@@ -24,7 +24,7 @@ public class DetailFoodActivityAdapter extends Fragment {
     List<String> descriptionFood;
     List<String> priceFood;
     List<String> titleCategory;
-    DetailFood adapter;
+    DetailCategoryAdapter adapter;
 
 
     @Nullable
@@ -65,7 +65,7 @@ public class DetailFoodActivityAdapter extends Fragment {
 
 
 
-        adapter = new DetailFood(getContext(), imageFood, titleFood, descriptionFood, priceFood);
+        adapter = new DetailCategoryAdapter(getContext(), imageFood, titleFood, descriptionFood, priceFood);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1, GridLayoutManager.VERTICAL, false);
         foodsInCategory.setLayoutManager(gridLayoutManager);

@@ -14,22 +14,30 @@ public class FoodActivity extends AppCompatActivity {
     FragmentTransaction transaction;
     MainFactory factory;
     MainCategories mainCategory;
+    DetailFragment detailFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_category);
 
         manager = getSupportFragmentManager();
+
         launchFragmentFactor();
     }
 
     private void launchFragmentFactor(){
+
         factory = new MainFactory();
         mainCategory = new MainCategories();
+        detailFragment = new DetailFragment(manager,transaction);
         transaction = manager.beginTransaction();
         transaction.add(R.id.factorContainer,factory,"FactorFragment");
-        transaction.add(R.id.categoryContainer,mainCategory,"CategoryFragment");
-        transaction.addToBackStack(null);
+        transaction.add(R.id.categoryContainer,detailFragment,"DetailFragment");
+//        transaction.add(R.id.categoryContainer,mainCategory,"CategoryFragment");
         transaction.commit();
     }
+
+
+
 }
