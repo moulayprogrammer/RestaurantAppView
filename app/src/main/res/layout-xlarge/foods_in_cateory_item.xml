@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource"
+    android:background="@drawable/card_view_bg"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="0dp"
+    android:paddingRight="0dp"
+    android:layout_gravity="center_horizontal"
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        card_view:cardPreventCornerOverlap="false"
+        app:cardElevation="0dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+
+                >
+                <ImageView
+                    android:id="@+id/imageFood"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/food_large"
+                    android:background="@drawable/food_shape"
+                    android:layout_gravity="center_vertical"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="8dp"
+                    >
+                    <TextView
+                        android:id="@+id/titleFood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textColor"
+                        android:text="Soupe de possion"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins_bold" />
+                    <TextView
+                        android:id="@+id/descriptionFood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Description de lasoupe ici et une autre description aussi Description de lasoupe ici et une autre description aussi"
+                        android:textSize="14sp"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/textNormalColor"
+                        android:fontFamily="@font/poppins_light"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:layout_marginTop="5dp"
+                        >
+                        <TextView
+                            android:id="@+id/priceFood"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="300 DA"
+                            android:textSize="14dp"
+                            android:textColor="@color/textNormalColor"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Détails"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/colorPrimary"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
