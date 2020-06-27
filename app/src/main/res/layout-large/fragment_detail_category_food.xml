@@ -28,11 +28,11 @@
 
             <TextView
                 android:id="@+id/restaurant"
-                android:fontFamily="@font/poppins_regular"
+                android:fontFamily="@font/poppins_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="5dp"
-                android:text="Restaurant"
+                android:text="RESTAURANT"
                 android:textColor="@color/colorPrimary"
                 android:textSize="24sp"/>
 
@@ -58,71 +58,70 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingRight="30dp"
-        android:paddingLeft="30dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
         android:orientation="vertical"
         >
         <LinearLayout
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/return_back" />
+                android:src="@drawable/ic_arrow_back" />
         <TextView
             android:id="@+id/titleCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Soupes"
-            android:textSize="22dp"
-            android:fontFamily="@font/poppins_regular"
+            android:textSize="25sp"
+            android:fontFamily="@font/poppins_bold"
             android:textColor="@color/colorPrimary"
             android:layout_weight="1"
-            android:textStyle="bold"
             android:paddingLeft="10dp"
             />
 
         </LinearLayout>
+            <LinearLayout
+            android:layout_marginTop="5dp"
+            android:id="@+id/categoryLayout"
+            android:layout_width="match_parent"
+            android:background="@drawable/category_container_bg"
+            android:layout_height="120dp"
+            android:paddingTop="15dp"
+            android:orientation="vertical" >
+
+        </LinearLayout>
         <LinearLayout
-        android:layout_marginTop="15dp"
-        android:id="@+id/categoryLayout"
-        android:layout_width="match_parent"
-        android:background="@drawable/category_container_bg"
-        android:layout_height="120dp"
-        android:paddingTop="15dp"
-            android:orientation="vertical"
-
-            >
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="-90dp"
-        >
-        <FrameLayout
-            android:layout_marginRight="20dp"
-            android:layout_marginEnd="20dp"
-            android:id="@+id/categoryDetailContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="-90dp"
             >
+            <FrameLayout
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/categoryDetailContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
 
-        </FrameLayout>
+            </FrameLayout>
 
-        <FrameLayout
-            android:id="@+id/foodDetailContainer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            >
+            <FrameLayout
+                android:id="@+id/foodDetailContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
 
-        </FrameLayout>
-    </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

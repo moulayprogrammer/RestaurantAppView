@@ -48,19 +48,38 @@ public class DetailCategoryFragment extends Fragment {
         // First food
         imageFood.add(R.drawable.food);
         titleFood.add("Soupe de poisson");
-        descriptionFood.add("La description de premiere repas");
+        descriptionFood.add("La description de premiere repas La description");
         priceFood.add("300 DA");
 
         // Second Food
         imageFood.add(R.drawable.food);
         titleFood.add("Salade variée");
-        descriptionFood.add("La description de deuxieme repas");
+        descriptionFood.add("La description de deuxieme repas La description");
         priceFood.add("500 DA");
 
         // Third Food
         imageFood.add(R.drawable.food);
         titleFood.add("Pizza Neapolitan");
-        descriptionFood.add("La description de troiseieme repas");
+        descriptionFood.add("La description de troiseieme repas La description");
+        priceFood.add("700 DA");
+
+
+        // First food
+        imageFood.add(R.drawable.food);
+        titleFood.add("Soupe de poisson");
+        descriptionFood.add("La description de premiere repas La description");
+        priceFood.add("300 DA");
+
+        // Second Food
+        imageFood.add(R.drawable.food);
+        titleFood.add("Salade variée");
+        descriptionFood.add("La description de deuxieme repas La description");
+        priceFood.add("500 DA");
+
+        // Third Food
+        imageFood.add(R.drawable.food);
+        titleFood.add("Pizza Neapolitan");
+        descriptionFood.add("La description de troiseieme repas La description");
         priceFood.add("700 DA");
 
 

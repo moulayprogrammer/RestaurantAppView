@@ -5,11 +5,8 @@
     <color name="colorAccent">#FAFAFA</color>
     <color name="white">#ffffff</color>
     <color name="textColor">#303030</color>
+    <color name="textNormalColor">#404040</color>
     <color name="buttonsColor">#B2B2B2</color>
     <color name="buttonBackground">#EAEAEA</color>
     <color name="contentBG">#fafafa</color>
-
-
-    <color name="colorPrimary2">#FF9800</color>
-
 </resources>
