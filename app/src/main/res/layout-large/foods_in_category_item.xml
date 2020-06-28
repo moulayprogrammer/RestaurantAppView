@@ -34,14 +34,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_weight="1"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
 
                 >
                 <ImageView
                     android:id="@+id/imageFood"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/food_large"
                     android:background="@drawable/food_shape"
@@ -49,7 +49,7 @@
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginLeft="8dp"
                     >
@@ -59,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
                         android:text="Soupe de possion"
-                        android:textSize="16dp"
+                        android:textSize="13dp"
                         android:fontFamily="@font/poppins_bold" />
                     <TextView
                         android:id="@+id/descriptionFood"
@@ -67,8 +67,8 @@
                         android:layout_height="wrap_content"
                         android:maxLines="2"
                         android:text="Description de lasoupe ici et une autre description aussi Description de lasoupe ici et une autre description aussi"
-                        android:textSize="14sp"
-                        android:layout_marginTop="3dp"
+                        android:textSize="10sp"
+
                         android:textColor="@color/textNormalColor"
                         android:fontFamily="@font/poppins_light"
                         />
@@ -76,15 +76,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="2dp"
                         >
                         <TextView
                             android:id="@+id/priceFood"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="300 DA"
-                            android:textSize="14dp"
+                            android:textSize="11dp"
                             android:textColor="@color/textNormalColor"
                             android:fontFamily="@font/poppins_regular"
                             android:layout_weight="1"
@@ -97,7 +96,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Détails"
-                            android:textSize="13sp"
+                            android:textSize="10sp"
                             android:fontFamily="@font/poppins_bold"
                             android:textStyle="bold"
                             android:layout_weight="1"

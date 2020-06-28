@@ -34,7 +34,7 @@
                 android:paddingRight="5dp"
                 android:text="RESTAURANT"
                 android:textColor="@color/colorPrimary"
-                android:textSize="24sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:fontFamily="@font/poppins_regular"
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:text="App"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="24sp"/>
+                android:textSize="20sp"/>
         </LinearLayout>
         <!--End row of title-->
     </androidx.appcompat.widget.Toolbar>
@@ -63,20 +63,21 @@
         android:orientation="vertical"
         >
         <LinearLayout
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/ic_arrow_back" />
         <TextView
             android:id="@+id/titleCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Soupes"
-            android:textSize="25sp"
+            android:textSize="17sp"
             android:fontFamily="@font/poppins_bold"
             android:textColor="@color/colorPrimary"
             android:layout_weight="1"
@@ -89,7 +90,7 @@
             android:id="@+id/categoryLayout"
             android:layout_width="match_parent"
             android:background="@drawable/category_container_bg"
-            android:layout_height="120dp"
+            android:layout_height="90dp"
             android:paddingTop="15dp"
             android:orientation="vertical" >
 
@@ -100,7 +101,7 @@
             android:orientation="horizontal"
             android:paddingRight="10dp"
             android:paddingLeft="10dp"
-            android:layout_marginTop="-90dp"
+            android:layout_marginTop="-60dp"
             >
             <FrameLayout
                 android:layout_marginRight="20dp"
